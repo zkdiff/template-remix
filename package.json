@@ -1,4 +1,9 @@
 {
+  "name": "",
+  "private": true,
+  "description": "",
+  "license": "",
+  "sideEffects": false,
   "scripts": {
     "dev": "run-p dev:*",
     "dev:css": "npm run generate:css -- --watch",
@@ -19,12 +24,27 @@
   },
   "devDependencies": {
     "@remix-run/dev": "^1.5.1",
+    "@remix-run/eslint-config": "^1.5.1",
+    "@types/eslint": "^8.4.2",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.5",
     "autoprefixer": "^10.4.7",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.11",
     "tailwindcss": "^3.0.24",
     "tsconfig-paths": "^4.0.0"
-  }
+  },
+  "prettier": {},
+  "eslintConfig": {
+    "extends": "@remix-run/eslint-config"
+  },
+  "eslintIgnore": [
+    "/node_modules",
+    "/build",
+    "/public/build"
+  ]
 }

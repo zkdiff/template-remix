@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Scripts } from "@remix-run/react";
 import styles from "~/styles/tailwind.css";
-import { LinksFunction } from "@remix-run/react/routeModules";
+import type { LinksFunction } from "@remix-run/react/routeModules";
 
 export const links: LinksFunction = () => {
   return [
