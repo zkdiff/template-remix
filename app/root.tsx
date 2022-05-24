@@ -1,7 +1,15 @@
-import * as React from "react";
-import { Scripts } from "@remix-run/react";
-import styles from "~/styles/tailwind.css";
 import type { LinksFunction } from "@remix-run/react/routeModules";
+
+import {
+  Links,
+  LiveReload,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+} from "@remix-run/react";
+
+import styles from "~/styles/tailwind.css";
 
 export const links: LinksFunction = () => {
   return [
@@ -10,26 +18,19 @@ export const links: LinksFunction = () => {
   ];
 };
 
-function App() {
-  const [count, setCount] = React.useState(0);
+export default function App() {
   return (
-    <html>
+    <html lang="en" className="h-full bg-gray-300">
       <head>
-        <title>My First Remix App</title>
+        <Meta />
+        <Links />
       </head>
-      <body>
-        <p>This is a remix app. Hooray!</p>
-        <button
-          onClick={() => {
-            setCount((c) => c + 1);
-          }}
-        >
-          {count}
-        </button>
+      <body className="h-full">
+        <Outlet />
+        <ScrollRestoration />
         <Scripts />
+        <LiveReload />
       </body>
     </html>
   );
 }
-
-export default App;
