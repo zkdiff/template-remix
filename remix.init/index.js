@@ -19,10 +19,7 @@ async function main({ rootDirectory }) {
     `SESSION_SECRET="${crypto.randomBytes(16).toString("hex")}"`
   );
 
-  const newPackageJson = packageJson.replace(
-    /template-super-simple-start-to-remix/g,
-    APP_NAME
-  );
+  const newPackageJson = packageJson.replace(/template-remix/g, APP_NAME);
 
   await Promise.all([
     fs.writeFile(ENV_PATH, newEnv),
