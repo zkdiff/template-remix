@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/react/routeModules";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import {
   Links,
@@ -17,6 +17,12 @@ export const links: LinksFunction = () => {
     { rel: "stylesheet", href: "https://rsms.me/inter/inter.css" },
   ];
 };
+
+export const meta: MetaFunction = () => ({
+  charset: "utf-8",
+  title: "",
+  viewport: "width=device-width,initial-scale=1",
+});
 
 export default function App() {
   return (

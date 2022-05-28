@@ -16,7 +16,11 @@
   },
   "prettier": {},
   "eslintConfig": {
-    "extends": "@remix-run/eslint-config"
+    "extends": [
+      "@remix-run/eslint-config",
+      "@remix-run/eslint-config/node",
+      "prettier"
+    ]
   },
   "eslintIgnore": [
     "/node_modules",
