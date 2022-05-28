@@ -1,0 +1,12 @@
+node_modules
+
+/build
+/public
+.env
+
+.cache/
+.vscode/
+
+/app/styles
+/prisma/dev.db
+/prisma/data.db-journal
