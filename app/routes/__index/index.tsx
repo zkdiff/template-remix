@@ -1,6 +1,6 @@
 import Header from "~/components/Header";
 
-export default function IndexPage() {
+export default function HomePage() {
   return (
     <div>
       <Header />
