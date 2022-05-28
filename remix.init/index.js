@@ -28,6 +28,8 @@ async function main({ rootDirectory }) {
       path.join(rootDirectory, "remix.init", "gitignore"),
       path.join(rootDirectory, ".gitignore")
     ),
+    fs.rm(EXAMPLE_ENV_PATH)
+
   ]);
 
   console.log(`Setup is complete.`);
